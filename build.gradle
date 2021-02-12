@@ -20,8 +20,8 @@ dependencies {
     // https://mvnrepository.com/artifact/org.mongodb/mongodb-driver
     compile group: 'org.mongodb', name: 'mongodb-driver', version: '3.12.0'
 
-    // https://mvnrepository.com/artifact/com.sun.jersey/jersey-json
-    compile group: 'com.sun.jersey', name: 'jersey-json', version: '1.19.3'
+//    // https://mvnrepository.com/artifact/com.sun.jersey/jersey-json
+//    compile group: 'com.sun.jersey', name: 'jersey-json', version: '1.19.3'
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     // https://mvnrepository.com/artifact/org.apache.avro/avro
@@ -58,6 +58,9 @@ dependencies {
 
     // https://mvnrepository.com/artifact/javax.xml.bind/jaxb-api
     compile group: 'javax.xml.bind', name: 'jaxb-api', version: '2.3.1'
+// https://mvnrepository.com/artifact/org.json/json
+    compile group: 'org.json', name: 'json', version: '20200518'
+
 
 
 }

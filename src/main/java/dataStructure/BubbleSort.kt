@@ -31,8 +31,9 @@ class BubbleSort {
 }
 
 fun main() {
-    val bubble = BubbleSort()
-    bubble.bubbleSort()
+//    val bubble = BubbleSort()
+//    bubble.bubbleSort()
+    println(listOf(1, 2, 3).reduce { sum, element -> sum + element })
 
 
 }
