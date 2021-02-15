@@ -31,6 +31,7 @@ fun main()
 ////    println(c.contains("error"))
 //    println(c.rangeTo("error"))
 
+
 }
 data class Student(val name:String?)
 {

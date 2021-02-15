@@ -6,13 +6,13 @@ import javax.ws.rs.NotAllowedException
 class StackImplementation {
 
     private var top = -1;
-    private val maxSize = 10
+    private val maxSize = 4
     private var item = 0;
     private val scan = Scanner(System.`in`)
     private val stack = IntArray(maxSize)
     fun push() {
         if (top == maxSize - 1) {
-            throw NotAllowedException("Stack is overFlow")
+            println("Stack is overFlow")
         } else {
             println("Enter item for insert in stack")
             item = scan.nextInt()
@@ -34,7 +34,25 @@ class StackImplementation {
 
 fun main() {
     val stack = StackImplementation()
+    val scan = Scanner(System.`in`)
+
     while (true) {
-        stack.pop()
+        println("Enter your Choice for push in data type push for pull data type pop exit for ex")
+        val choice = scan.nextLine()
+        when (choice) {
+            "push" -> {
+                stack.push()
+            }
+            "pop" -> {
+                stack.pop()
+            }
+            "ex" -> {
+                break
+            }
+            else-> {
+                println("Wrong choice")
+            }
+
+        }
     }
 }

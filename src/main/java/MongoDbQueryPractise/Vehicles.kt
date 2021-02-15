@@ -11,15 +11,14 @@ class Vehicles {
     val mongoCollection = mongoDatabase.getCollection("vehicle")
     fun getVehicle() {
 
-        val andQury = mutableListOf(Filters.eq("orgId", "1fa09fcf-01a5-48b1-bc9b-1893e7353f25"))
+        val andQuery = mutableListOf(Filters.eq("orgId", "1fa09fcf-01a5-48b1-bc9b-1893e7353f25"))
         val orQuery = mutableListOf<Bson>()
-        orQuery.add(Filters.eq("createTime", "1612286894358"))
-        orQuery.add(Filters.eq("createTime", "1612278662503"))
-        orQuery.add(Filters.eq("createTime", "1612328905538"))
-//        andQuery.addAll(orQuery)
+        orQuery.add(Filters.eq("uuid", "3b3231a2-943e-41a3-b000-073d87ab3016ss"))
+        orQuery.add(Filters.eq("vehicleRegistrationNumber", "5224"))
+        andQuery.addAll(listOf(Filters.or(orQuery)))
 
 
-        val cursor = mongoCollection.find(Filters.and(andQury)).iterator()
+        val cursor = mongoCollection.find(Filters.and(andQuery)).iterator()
         while (cursor.hasNext()) {
             println(cursor.next())
         }
